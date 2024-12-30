@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+      body{
+        background-color: #A6C3CE;
+      }
+      div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      form{
+        align-self: center;
+      }
+      #code{
+        width: 3.5vw;
+        background-color: aliceblue;
+      }
+
+		
+	</style>
+</head>
+<body>
+  <div>
+  <h1 style="text-align:center;"> LOGIN !!!</h1>	
+<form>
+<table style="height:500px; width:500px;">
+<tr>
+<td> First Name </td>
+<td> <input id="id1" type="text" name="firstname" placeholder="Enter Your First Name"> </td>
+</tr>
+
+<tr>
+<td> Last Name</td>
+<td><input id="id1" type="text" name="lastname" placeholder="Enter Your Last Name"> </td>
+</tr>
+
+<tr>
+<td> DOB </td>
+<td> <input type="date" name="dob"></td>
+</tr>
+
+<tr>
+<td> Sex </td>
+<td>
+	<input type="radio" name="g" >Male <br>
+	<input type="radio" name="g" > Female <br>
+	<input type="radio" name="g" > Trans <br>
+ </td>
+</tr>
+
+<tr>
+<td> Postal/Pin Code</td>
+<td> <input id="id1" type="number" name="pin"> </td>
+</tr>
+
+<tr>
+  <td> Country </td>
+  <td> 
+    <select name="country" id="country_select">
+      <option value="India">India</option> 91
+      <option value="USA">USA</option> 1
+      <option value="UK">UK</option> 44
+      <option value="Australia">Australia</option> 61
+      <option value="Brazil">Brazil</option> 55
+      <option value="Denmark">Denmark</option> 45
+      <option value="Germany">Germany</option> 49
+    </select>
+  </td>
+  </tr>
+
+<tr>
+<td> Mo. Number</td>
+<td> <span id="code"></span> <input id="id1" type="number" name="mo.number"> </td>
+</tr>
+
+<tr>
+<td> Email Address</td>
+<td><input type="email" name="email" placeholder="Enter Your Email Address" id="id1"> </td>
+</tr>
+
+<tr>
+<td> </td>
+<td><input type="reset" name="reset" value="Reset"> <input type="submit" name="submit" value="Submit"> </td>
+</tr>
+
+
+<table>
+</form>
+</div>
+<script>
+ let cntry_select=document.querySelector("#country_select");
+ let cd=document.querySelector("#code");
+
+ country_select.addEventListener('change', function() {
+
+  switch (country_select.value) {
+        case 'India':
+          cd.innerHTML = '+91';
+          break;
+        case 'USA':
+          cd.innerHTML = '+1';
+          break;
+        case 'UK':
+          cd.innerHTML = '+44';
+          break;
+        case 'Australia':
+          cd.innerHTML = '+61';
+          break;
+        case 'Brazil':
+          cd.innerHTML = '+55';
+          break;
+        case 'Denmark':
+          cd.innerHTML = '+45';
+          break;
+        case 'Germany':
+          cd.innerHTML = '+49';
+          break;
+        default:
+          countryCode.innerHTML = '+91'; 
+      }
+ });
+
+</script>
+</body>
+</html>

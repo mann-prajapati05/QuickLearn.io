@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickLearn.io</title>
+  <link rel="shortcut icon" href="book.gif" type="image/x-icon">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      background-color: #A6C3CE;
+      background-size: cover;
+    }
+    #head{
+      height: 60vh;
+      width: 99vw;
+      margin:5px;
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+    }
+    #logo{
+      height: 75% ;
+      width: 30%;
+      align-self: center;
+      transition: all;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+    }
+    #name{
+      font-size: 3.8em;
+      text-align: center;
+      padding-bottom: 60px;
+      position: relative;
+      z-index: 1;
+      animation: website_name 2.5s ease-in-out 0s 1 normal;
+    }
+    #login{
+      display: flex;
+      height: 50px;
+      width: 20px;
+    }
+    #login_img{
+      width: 225%;
+      height: 85%;
+      position: relative;
+      top: -10px;
+    }
+    #navi{
+      display:flex;
+      justify-content: end;
+      height: 10vh;
+      width: 96vw;
+      margin: 5px;
+      border: 1px solid rgb(246, 242, 242);
+      background-color: rgba(50,44,44,0.9);
+      border-radius: 30px;
+      overflow: hidden;
+    }
+    nav li{
+      color: aliceblue;
+      float: left;
+      margin: 20px;
+    }
+    nav ul li a {
+     color: aliceblue !important;
+     text-decoration: none !important;
+    }
+    #li1{
+        padding-right: 130px;
+    }
+    #btn{
+      width: 7vw;
+      height: 4vh;
+      margin-left: 10px;
+      border: 1px solid black;
+      border-radius: 15px;
+      transition: all 0.5s ease;
+    }
+    #sbar{
+      width: 19vw;
+      height: 3.5vh;
+      border: 1px solid black;
+      border-radius: 15px;
+      
+    }
+    #main{
+      height: 150vh;
+      width: 99vw;
+      margin:5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .item{
+      height:40vh;
+      width:95vw;
+      margin: 5px;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: row;
+      transition: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+      background-color: #B7D1D3;
+      border-radius: 25px;
+    }
+    footer{
+      height: 200px;
+      width: 99vw;
+      margin: 5px;
+      margin-top: 7px;
+      position: relative;
+      bottom: 5px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .pic{
+      height: 80%;
+      width: 32%;
+      padding: 20px 5px 0px 10px;
+      display: flex;
+    }
+    .details{
+      height: 80%;
+      width: 60%;
+      padding: 20px 5px 0px 10px;
+    }
+    img{
+       padding: 3px;
+    }
+    .crs_name{
+        font-size: 1.5em;
+        text-decoration:underline ;
+        margin: 10px 0px 0px 25px;
+    }
+    .dtls{
+      font-style: oblique;
+      margin: 10px 0px 0px 25px;
+    }
+    .price{
+      margin: 10px 0px 0px 25px;
+    }
+    .enroll{
+      margin: 10px 0px 0px 25px;
+      height: 15%;
+      width:18%;
+      border: 2px solid black;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
+    }
+    #see_all{
+      width:200%;
+      height: 150%;
+      transition: all 0.5s ease-in-out;
+      border: 2px solid black;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #btn:active{
+      height: 3.5vh;
+      width: 6vw;
+    }
+    .enroll:active{
+      height: 12%;
+      width: 15% ;
+    }
+    .item:hover{
+      height:45vh;
+      width: 100vw;
+    }
+    #logo:hover{
+      transform: rotate(360deg);
+    }
+    #see_all:active{
+      width:180%;
+      height: 130%;
+    }
+    @keyframes website_name{
+      from{
+        transform: translateY(-100%);
+        opacity: 0.1;
+      }
+      to{
+        transform: translateY(0%);
+        opacity: 1.0;
+      }
+    }
+    #item_count{
+      height: 15px;
+      width: 15px;
+      background-color: red;
+      border: 1px solid red;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1;
+      top: 380px;
+      text-align: center;
+    }
+    .theme{
+      height: 50px;
+      width: 50px;
+      border:2px solid black;
+      background-size: cover;
+      position: absolute;
+      border-radius: 50%;
+    }
+    #theme1{
+      right: 10%;
+      top: 10%;
+      background-color: #6D6875;
+    }
+    #theme2{
+      right: 15%;
+      top: 10%;
+      background-color: #A6C3CE;
+    }
+    #theme3{
+      right: 5%;
+      top: 10%;
+      background-color: #B5B5A9;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div id="head">
+      
+        <button class="theme" id="theme1" onclick="theme_change1()"></button>
+        <button class="theme" id="theme2" onclick="theme_change2()"></button>
+        <button class="theme" id="theme3" onclick="theme_change3()"></button>
+
+      <img src="bookicon.png" alt="QuickLearn.io's logo" id="logo">
+      <p id="name">QuickLearn.io</p>
+    </div>
+    
+    <div id="navi">
+      <nav>
+        <ul type="none">
+          <li id="login"> 
+           <a href="login.html"><img src="login.png" alt="Login" id="login_img"> </a> 
+          </li>
+          <li id="li1">
+            <input type="search" id="sbar"> <button id="btn">Search</button>
+          </li>
+          <li> <a href="#">All Courses </a></li>
+          <li> <a href="">High rated courses</a></li>
+          <li><a href="enroll_cart.html">Your courses</a><span id="item_count"> 0</span></li>
+          <li><a href="">Help</a></li>
+          <li><a href="aboutus.html">About us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="main">
+    <div id="item1" class="item">
+      <div class="pic">
+        <img src="https://techsciblog.com/wp-content/uploads/2019/08/2019-What-is-AI-Really-Blog.jpg" alt="AI-Course">
+      </div>
+      <div class="details">
+        <p class="crs_name">Artificial Intelligent Course</p>
+        <p class="dtls">
+          ~Unlock the limitless potential of your future with our AI course a strategic investment in knowledge that not only empowers you with cutting-edge skills in artificial intelligence but propels your career into the forefront of innovation and technological advancement
+        </p>
+        <p class="price"> Duration : 2 months(60 Days) ||  Price : 20 $ <del style="font-size:smaller; color:red">  25 $ </del></p>
+        <button class="enroll" onclick="addToBag(item1[0].id)">Enroll Now !!</button>
+
+      </div>
+      
+    </div>
+    <div id="item2" class="item">
+      <div class="pic">
+          <img src="https://g9p3g3a3.rocketcdn.me/wp-content/uploads/2020/09/bear-vs-bull-markets-ig.jpg" alt="stock-market course" width="333px">
+      </div>
+      <div class="details">
+         <p class="crs_name">Stock-Market Course</p>
+         <p class="dtls">
+          ~Elevate your financial acumen and conquer the complexities of the stock market with our comprehensive course. Gain invaluable insights, master strategic analysis, and chart a prosperous financial future as you delve into the dynamic world of stock market investing
+         </p>
+
+         <p class="price"> Duration : 2 months(60 Days) ||  Price : 24 $ <del style="font-size:smaller; color:red">  30 $ </del></p>
+        <button class="enroll" onclick="addToBag(item2[0].id)">Enroll Now !!</button> 
+      </div>
+
+
+    </div>
+    <div id="item3" class="item">
+      <div class="pic">
+          <img src="https://th.bing.com/th/id/OIP.JLeqgC7zqwFT8nIoI7txLwHaEK?rs=1&pid=ImgDetMain" alt="portrait skill course">
+      </div>
+      <div class="details">
+        <p class="crs_name">Portrait Skill Course</p>
+        <p class="dtls">
+          ~Unleash your creativity and refine your artistic prowess with our portrait skills course. Delve into the nuances of portraiture, learn advanced techniques, and transform your passion into captivating visual stories
+        </p>
+
+        <p class="price"> Duration : 1 months(30 Days)   ||   Price : 10 $ <del style="font-size:smaller; color:red">  12.5 $ </del></p>
+        <button class="enroll" onclick="addToBag(item3[0].id)">Enroll Now !!</button>
+
+      </div>
+    </div>
+    <div>
+      <button id="see_all"> See All ≫ </button>
+    </div>
+
+  </div>
+  <footer>
+    <div>
+      <ul>
+        <li>Careers</li>
+        <li>Sell With Us</li>
+        <li>Terms of Use</li>
+        <li>Furniture Return Policy</li>
+        <li>Replacement Policy</li>
+      </ul>
+      </div>
+      <div>
+        <li>Shopping</li>
+        <li>Cancellation</li>
+        <li>Returns & Refunds</li>
+        <li>Return To Store</li>
+        
+      </div>
+      <div>
+        <li>Reviews Guidelines</li>
+        <li>Customer Service</li>
+        <li>Payments</li>
+      </div>
+
+  </footer>
+
+  
+</body>
+<script>
+function theme_change1(){
+  document.body.style.backgroundColor = "#6D6875";
+
+  var items = document.querySelectorAll('.item');
+  
+  items.forEach(function(item) {
+    item.style.backgroundColor = "#F3DBCE";
+  });
+}
+function theme_change2(){
+  document.body.style.backgroundColor = "#A6C3CE";
+
+  var items = document.querySelectorAll('.item');
+  
+  items.forEach(function(item) {
+    item.style.backgroundColor = "#B7D1D3";
+  });
+}
+function theme_change3(){
+  document.body.style.backgroundColor = "#A3A398";
+
+  var items = document.querySelectorAll('.item');
+  
+  items.forEach(function(item) {
+    item.style.backgroundColor = "#FBFBEB";
+  });
+}
+
+</script>
+
+<script src="index.js"></script>
+</html>
